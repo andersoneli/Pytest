@@ -1,5 +1,5 @@
 import pytest
-from oop_loan_pmt import Loan
+from loan import *
 
 @pytest.fixture
 def client():
@@ -33,6 +33,11 @@ def test_loan_payment():
 
 # Functional tests
 def test_collect_loan_details(monkeypatch):
+    """
+    GIVEN the user enters loan details
+    WHEN input details do not match expected details
+    THEN overwrite with expected details
+    """
     inputs = ["100000", "30", "0.06"]
     monkeypatch.setattr('builtins.input', lambda _: inputs.pop(0))
     loan = collectLoanDetails()
@@ -42,6 +47,11 @@ def test_collect_loan_details(monkeypatch):
 
 # Integration test
 def test_main_output(capsys, monkeypatch):
+    """
+    GIVEN get loan details
+    WHEN input details do not match expected details
+    THEN overwrite with expected details
+    """
     inputs = ["100000", "30", "0.06"]
     monkeypatch.setattr('builtins.input', lambda _: inputs.pop(0))
     main()
