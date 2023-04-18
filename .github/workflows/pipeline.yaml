@@ -90,5 +90,5 @@ jobs:
         with:
           app-name: 'andersonLoan'
           slot-name: 'Production'
-          #publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2CE52FA973FB4767B4C0FA92E59B66CF }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E4A71BE1C9894E5C840B74AA44F135B1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_679F037DD4D14D3A82F9F5A0E597C50D }}
+
